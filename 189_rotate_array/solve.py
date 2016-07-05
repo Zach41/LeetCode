@@ -17,8 +17,7 @@ class Solution(object):
         for i in range(len(new)):
             nums[i] = new[i]
 
-        self.nums = nums
-        
+        self.nums = nums        
 
 S = Solution()
 s.rotate([1, 2, 3, 4, 5, 6, 7], 3)
