@@ -16,5 +16,20 @@ class Solution(object):
 
         return min_e
 
+    def findMin2(self, nums):
+        # worst case is O(n)
+        n = len(nums)
+        start, end = 0, n-1
+        while start+1<end:
+            mid = (start + end) / 2
+            if nums[mid] < nums[end]:
+                end = mid
+            elif nums[mid] > nums[end]:
+                start = mid
+            else:
+                end -= 1
+
+        return min(nums[start], nums[end])
 s = Solution()
 print s.findMin([4, 5, 6, 7, 0, 1, 2, 3])
+print s.findMin([1, 2, 2, 2, 2, 2])
