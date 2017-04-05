@@ -20,7 +20,8 @@ class Solution(object):
                 r = mid - 1
             else:
                 l = mid + 1
-        return l*l == num
+        return l * l == num
+
 
 s = Solution()
 print(s.isPerfectSquare(16))
