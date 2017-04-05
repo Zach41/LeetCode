@@ -18,8 +18,7 @@ class Solution(object):
 
         dp = [sums[:], [0]*len(sums)]
         cur = 0
-        import pdb
-        pdb.set_trace()
+
         for m0 in range(2, m + 1):
             for n0 in range(m0, n + 1):
                 large_sum = max(dp[cur][m0 - 1], sums[n0] - sums[m0 - 1])
